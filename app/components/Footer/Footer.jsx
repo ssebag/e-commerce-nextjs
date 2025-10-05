@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div>
-      <footer className="py-5">
+      <footer className="py-5 sm: p-5">
         <div className="py-1">
           <div className="flex items-center justify-between">
               <h2>©2025 Hexashop. All rights reserved.</h2>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Hero from './../public/assets/hero.svg'
 export default function Home() {
   return (
-    <div className="flex items-center  gap-[100px] mb-2">
+    <div className="flex items-center  gap-[100px] mb-2 sm: p-5">
      <div className="flex flex-col items-start gap-[25px] w-[45%]">
        <h1 className="text-5xl font-bold">Your Best Online Shop Destination!</h1>
        <p className="text-xl">Discovery a world of endless shopping possibilities at our online store. 

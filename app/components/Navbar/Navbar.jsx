@@ -12,7 +12,7 @@ function Navbar() {
 
   const Menu = [
     { id: 1, name: "About", path: "/about" },
-    { id: 2, name: "Portfolio", path: "/portfolio" },
+    { id: 2, name: "Products", path: "/products" },
     { id: 3, name: "Contact Us", path: "/contact" },
   ];
 
@@ -27,17 +27,19 @@ function Navbar() {
             </Link>
           ))}
         </ul>
-        <button className="bg-yellow-400 w-[75px] h-[50px] rounded-[10px]">Logout</button>
+        <button className="bg-yellow-400 w-[75px] h-[50px] rounded-[10px] cursor-pointer">Logout</button>
       </div>
-      <div onClick={Toggle}>
+      <div onClick={Toggle} className="md:hidden">
         <Image src={ListIcon}
           height={20}
           width={20}
-          className="block cursor-pointer md:hidden" />
-      </div>
+          alt="list icon"
+          className="block cursor-pointer " />
+    
       {
         navMobile && (
-          <div className='absolute top-[45px] right-[10px] p-[30px] border-yellow-400 rounded-[5px] border-[1px] text-center sm:flex flex-col gap-[20px]'>
+          <div className='absolute top-[45px] right-[10px] p-[30px]
+           border-yellow-400 rounded-[5px] border-[1px] text-center flex flex-col gap-[20px]'>
             <p onClick={Toggle} className="absolute top-[10px] right-[10px]">X</p>
             <ul className='flex flex-col gap-[20px] mt-8'>
               {Menu.map((item, index) => (
@@ -46,10 +48,10 @@ function Navbar() {
                 </Link>
               ))}
             </ul>
-            <button className="bg-yellow-400 w-[75px] h-[50px] rounded-[10px]">Logout</button>
+            <button className="bg-yellow-400 w-[75px] h-[50px] rounded-[10px] hover:cursor-pointer">Logout</button>
           </div>
         )
-      }
+      }  </div>
     </div>
   )
 }
