@@ -3,7 +3,7 @@ function Footer() {
     <div>
       <footer className="py-5 sm: p-5">
         <div className="py-1">
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between items-center md:flex-row sm:flex-col gap-[10px]">
               <h2>©2025 Hexashop. All rights reserved.</h2>
               <ul className="flex justify-center gap-6 md:gap-8">
                 <li>

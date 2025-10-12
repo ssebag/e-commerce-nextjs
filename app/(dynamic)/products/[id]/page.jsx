@@ -23,23 +23,23 @@ async function Post({params}) {
   return (
     <div>
         <div className='flex flex-col items-center mb-[20px]'>
-          <img src={product.thumbnail} alt={product.title} className='w-[450px] '/>
-          <div className='flex gap-[20px]'>
+          <img src={product.thumbnail} alt={product.title} className='w-[300px] md:w-[450px]'/>
+          <div className='flex  gap-[0px] md:gap-[20px]'>
             {product.images.map(image =>(
-              <img src={image} alt={product.title} key={product.id} className='h-[150px] ' />
+              <img src={image} alt={product.title} key={product.id} className='h-[100px] md:h-[150px] ' />
             ))}
           </div>
         </div>
        
-       <div className='flex flex-col gap-[20px]'>
+       <div className='flex flex-col gap-[20px] p-5'>
           <h5 className='text-yellow-400 text-2xl font-semibold text-center mb-[5px]'>{product.title}</h5>
-            <p className='text-[18px]'>{product.description}</p>
+            <p className='text-[18px] text-center max-[500px]'>{product.description}</p>
             <p className='text-[18px]'><span className='text-yellow-400 font-bold'>Category: </span>{product.category}</p>
             <p className='text-[18px]'><span className='text-yellow-400 font-bold'>Price: </span>{product.price}</p>
             <p className='text-[18px]'><span className='text-yellow-400 font-bold'>Brand: </span>{product.brand}</p>
            <hr className='w-[300px]'/>
             <p className='text-yellow-400 font-bold'>Reviews: </p>
-            <div className='flex justify-between '>
+            <div className='flex gap-[20px] justify-center flex-wrap'>
                 {product.reviews.map(review =>(
                     <div className='flex flex-col gap-[20px] border-[1px] border-yellow-400 rounded-2xl p-[20px]'>
                       <p className='text-[18px]'><span className='text-yellow-400'>Rating: </span>{review.rating}</p>
